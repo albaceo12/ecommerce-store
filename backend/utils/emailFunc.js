@@ -1,4 +1,4 @@
-import transporter from "../lib/emailService";
+import transporter from "../lib/emailService.js";
 export const generateEmailContent = (user, order) => {
   // Generate an HTML list of all the products in the order
   const productList = order.products
