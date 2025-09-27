@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { toast } from "react-toastify";
-import axios from "../lib/axios";
-import { productsMockData } from "../../utils/productsMockData";
+import axios from "../lib/axios.js";
+import { productsMockData } from "../../utils/productsMockData.js";
 
 // ✅ A single flag to switch between mock and real API
 const isMock = false;

@@ -1,7 +1,7 @@
 // adminStore.js (A new file for admin-related tasks)
 
 import { create } from "zustand";
-import axios from "../lib/axios";
+import axios from "../lib/axios.js";
 import { toast } from "react-toastify";
 export const useAdminStore = create((set) => ({
   createCoupon: async (couponData) => {
