@@ -1,8 +1,8 @@
 import { create } from "zustand";
 import axios from "../lib/axios";
 import { toast } from "react-toastify";
-import { debounce } from "../../utils/debounce.";
-import cartMockData from "../../utils/cartMockData";
+import { debounce } from "../../utils/debounce.js";
+import cartMockData from "../../utils/cartMockData.js";
 // Conditionally import the mock version of axios based on the 'isMock' flag.
 const isMock = true; // Use this to toggle between mock and real API
 const api = isMock ? cartMockData : axios;
