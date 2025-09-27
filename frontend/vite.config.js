@@ -9,7 +9,7 @@ export default defineConfig({
       // Identify any request that starts with /api.
       "/api": {
         // Send this request to my back-end address, http://localhost:5000.
-        target: "http://localhost:5000", // ✅ A simple proxy to redirect /api requests
+        target: "https://ecommerce-store-backend-qed4.onrender.com", // ✅ A simple proxy to redirect /api requests
         changeOrigin: true, // The changeOrigin option tells the proxy to change the Host header(localhost:5173) of the incoming request to match the target URL.
         secure: false,
       },
