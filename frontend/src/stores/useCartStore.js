@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import axios from "../lib/axios";
+import axios from "../lib/axios.js";
 import { toast } from "react-toastify";
 import { debounce } from "../../utils/debounce.js";
 import cartMockData from "../../utils/cartMockData.js";
