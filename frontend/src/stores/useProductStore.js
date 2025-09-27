@@ -4,7 +4,7 @@ import axios from "../lib/axios";
 import { productsMockData } from "../../utils/productsMockData";
 
 // ✅ A single flag to switch between mock and real API
-const isMock = true;
+const isMock = false;
 
 // A more robust mock API with corrected logic
 const mockApi = {
