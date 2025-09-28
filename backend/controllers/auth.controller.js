@@ -35,13 +35,13 @@ const setCookies = (res, accessToken, refreshToken) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 15 * 60 * 1000,
-    sameSite: "strict", // Protect against CSRF attacks
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Protect against CSRF attacks
   });
   res.cookie("refresh-token", refreshToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     maxAge: 7 * 24 * 60 * 60 * 1000,
-    sameSite: "strict",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   });
 };
 
@@ -160,7 +160,7 @@ export const refreshToken = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 15 * 60 * 1000,
-      sameSite: "strict",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     });
     res.json({ message: "Token refreshed successfully" });
   } catch (error) {
