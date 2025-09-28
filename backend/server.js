@@ -25,8 +25,8 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(
   cors({
-    origin: "https://ecommerce-store-jnz5.onrender.com",
-    credentials: true,
+    // origin: "https://ecommerce-store-jnz5.onrender.com",
+    // credentials: true,
   })
 ); // the cors middleware
 // ✅ We only use express.raw for the webhook route

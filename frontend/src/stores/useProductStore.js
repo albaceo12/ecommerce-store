@@ -273,7 +273,7 @@ export const useProductStore = create((set, get) => ({
       }
 
       set({
-        products: res?.products || res?.data?.products || [],
+        products: res?.data?.products || res?.products || [],
         loading: false,
         isReadyForDisplay: true,
       });
@@ -422,7 +422,7 @@ export const useProductStore = create((set, get) => ({
       }
 
       set({
-        products: res || res.data || [],
+        products: res.featuredProducts || res.data || [],
         loading: false,
         isReadyForDisplay: true,
       });
